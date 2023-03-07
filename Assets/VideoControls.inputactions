@@ -1,0 +1,76 @@
+{
+    "name": "VideoControls",
+    "maps": [
+        {
+            "name": "default",
+            "id": "bda99504-f569-4320-b14c-46ece621cc5e",
+            "actions": [
+                {
+                    "name": "Brightness Control",
+                    "type": "Button",
+                    "id": "7d65e878-00a0-456b-bb66-26d44def2b75",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Quit",
+                    "type": "Button",
+                    "id": "25b9a967-9ff7-48c9-8096-479fbb4a973f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3286a880-0015-4776-b14f-6b1e3bafdd39",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "Scale",
+                    "groups": "",
+                    "action": "Brightness Control",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "f0ed69e2-cdf5-4977-ad9b-558d3959e655",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Brightness Control",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "ee95a50c-4a09-4389-91a1-7dd64c17736f",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Brightness Control",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "f286d141-db6a-4cae-bd81-66b0276e8d6e",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
