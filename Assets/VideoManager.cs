@@ -78,8 +78,10 @@ public class VideoManager : MonoBehaviour
 
     void LateUpdate()
     {
+        SetOutput();
         SetOutputFromAnalog();
         MonitorTime();
+        Debug.Log(currentBrightness);
     }
 
     public void ControlBrightness(float value) {
@@ -88,12 +90,17 @@ public class VideoManager : MonoBehaviour
 
     void SetOutput() {
         output.color = Color.white * currentBrightness;
+        TriggerInteract();
     }
     void SetOutputFromAnalog(){
         string message = serial.ReadSerialMessage();
 
         if (float.TryParse(message, out float value)){
-            output.color = Color.white * Mathf.Lerp(minBrightness, maxBrightness, value);
+            float brightness = Mathf.Clamp(value, minBrightness, maxBrightness);
+            if (brightness != currentBrightness){
+                currentBrightness = brightness;
+                TriggerInteract();
+            }
         }
     }
 
