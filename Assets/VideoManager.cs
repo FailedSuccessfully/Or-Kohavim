@@ -3,6 +3,7 @@ using UnityEngine.Video;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.Collections;
+using System.IO;
 using System.Collections.Generic;
 
 public class VideoManager : MonoBehaviour
@@ -25,6 +26,8 @@ public class VideoManager : MonoBehaviour
     float timer;
     bool isIdle;
 
+    string cfg = Application.streamingAssetsPath + "/cfg.ini";
+
     void Awake()
     {
         // cache component
@@ -32,6 +35,17 @@ public class VideoManager : MonoBehaviour
         input = GetComponent<PlayerInput>();
         serial = GetComponent<SerialController>();
 
+        if (File.Exists(cfg)){
+            string text = File.ReadAllLines(cfg)[0];
+            Debug.Log(text);
+            if (text != "")
+                serial.portName = text;
+        }
+        else{
+            Debug.LogWarning($"config file {cfg} not found");
+        }
+
+    
         // assign controls
         InputActionAsset iaa = input.actions;
         iaa.FindAction("Brightness Control").performed += ctx => 
