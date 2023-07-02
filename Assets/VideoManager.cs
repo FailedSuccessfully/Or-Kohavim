@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 using System.Collections;
 using System.IO;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ public class VideoManager : MonoBehaviour
 
     
     float currentBrightness;
+    PlayableDirector pd;
     VideoPlayer vid;
     PlayerInput input;
     SerialController serial;
@@ -31,6 +33,7 @@ public class VideoManager : MonoBehaviour
     void Awake()
     {
         // cache component
+        pd = GetComponent<PlayableDirector>();
         vid = GetComponent<VideoPlayer>();
         input = GetComponent<PlayerInput>();
         serial = GetComponent<SerialController>();
@@ -60,11 +63,11 @@ public class VideoManager : MonoBehaviour
 
     void Start()
     {
-        title.CrossFadeAlpha(0, 0, true);
+        //title.CrossFadeAlpha(0, 0, true);
         currentBrightness = maxBrightness;
         ControlBrightness(currentBrightness);
-        vid.Play();
-        timer = idleTime;
+        //vid.Play();
+        timer = 0;
         
     }
 
@@ -80,8 +83,6 @@ public class VideoManager : MonoBehaviour
     {
         SetOutput();
         SetOutputFromAnalog();
-        MonitorTime();
-        Debug.Log(currentBrightness);
     }
 
     public void ControlBrightness(float value) {
@@ -90,7 +91,6 @@ public class VideoManager : MonoBehaviour
 
     void SetOutput() {
         output.color = Color.white * currentBrightness;
-        TriggerInteract();
     }
     void SetOutputFromAnalog(){
         string message = serial.ReadSerialMessage();
@@ -105,14 +105,18 @@ public class VideoManager : MonoBehaviour
     }
 
     void TriggerInteract(){
-        vid.Play();
+        pd.Resume();
+        //Debug.Log("un-idle");
         isIdle = false;
         timer = 0;
     }
 
     void TriggleIdle(){
         //vid.Pause();
-        //isIdle = true;
+        pd.Pause();
+        isIdle = true;
+
+        //Debug.Log("idle");
     }
 
     void MonitorTime(){

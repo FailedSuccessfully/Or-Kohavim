@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 1004654647}
   - component: {fileID: 1004654648}
   - component: {fileID: 1004654649}
+  - component: {fileID: 1004654650}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -371,14 +372,14 @@ RectTransform:
   m_GameObject: {fileID: 1004654644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 10520504}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3, y: 0.8}
-  m_AnchorMax: {x: 0.7, y: 0.9}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -410,7 +411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d7d87d068fdef0044917fe632aae43d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37d90772850548a4f8fad5d30e129c59, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -427,13 +428,33 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004654644}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 1
   m_AspectRatio: 10
+--- !u!95 &1004654650
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004654644}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1130020789
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +541,7 @@ GameObject:
   - component: {fileID: 1641027454}
   - component: {fileID: 1641027455}
   - component: {fileID: 1641027456}
+  - component: {fileID: 1641027457}
   m_Layer: 0
   m_Name: Video Manager
   m_TagString: Untagged
@@ -682,6 +704,26 @@ MonoBehaviour:
   messageListener: {fileID: 0}
   reconnectionDelay: 1000
   maxUnreadMessages: 1000
+--- !u!320 &1641027457
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641027451}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: b6d1ad2e8ca6ae54cb8208ad7e21f9ba, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 1
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 655695907250472701, guid: b6d1ad2e8ca6ae54cb8208ad7e21f9ba, type: 2}
+    value: {fileID: 1004654650}
+  m_ExposedReferences:
+    m_References:
+    - 778f27e85ae1add49b6c2e3e4b69d31a: {fileID: 1641027452}
 --- !u!1 &1823229642
 GameObject:
   m_ObjectHideFlags: 0
