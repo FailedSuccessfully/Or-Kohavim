@@ -113,7 +113,7 @@ public class VideoManager : MonoBehaviour
 
     void TriggleIdle(){
         //vid.Pause();
-        pd.Pause();
+        //pd.Pause();
         isIdle = true;
 
         //Debug.Log("idle");

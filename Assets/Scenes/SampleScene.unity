@@ -612,7 +612,7 @@ MonoBehaviour:
   minBrightness: 0.3
   maxBrightness: 1
   attenuation: 0.05
-  idleTime: 15
+  idleTime: 1
   output: {fileID: 1130020791}
   title: {fileID: 1004654648}
   titles:
