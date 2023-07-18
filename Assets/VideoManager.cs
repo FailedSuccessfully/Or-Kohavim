@@ -17,6 +17,7 @@ public class VideoManager : MonoBehaviour
     [SerializeField] Image title;
     [SerializeField] Sprite[] titles;
     [SerializeField] Vector2[] timeStamps;
+    [SerializeField] VoltControl vc;
     int persistantIndex;
 
     
@@ -96,9 +97,11 @@ public class VideoManager : MonoBehaviour
         string message = serial.ReadSerialMessage();
 
         if (float.TryParse(message, out float value)){
-            float brightness = Mathf.Clamp(value, minBrightness, maxBrightness);
+            float input = Mathf.InverseLerp(vc.minVolt, vc.maxVolt, value);
+            float brightness = Mathf.Clamp(input, minBrightness, maxBrightness);
             if (brightness != currentBrightness){
                 currentBrightness = brightness;
+                Debug.Log(currentBrightness);
                 TriggerInteract();
             }
         }

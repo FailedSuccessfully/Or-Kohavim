@@ -657,6 +657,7 @@ MonoBehaviour:
   - {x: 107, y: 112.18}
   - {x: 117.13, y: 12.18}
   - {x: 122.09, y: 129.02}
+  vc: {fileID: 11400000, guid: f5d64631456964447872dea12e931dce, type: 2}
 --- !u!114 &1641027455
 MonoBehaviour:
   m_ObjectHideFlags: 0
