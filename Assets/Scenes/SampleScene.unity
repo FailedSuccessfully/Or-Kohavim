@@ -362,7 +362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1004654645
 RectTransform:
   m_ObjectHideFlags: 0
@@ -541,7 +541,6 @@ GameObject:
   - component: {fileID: 1641027454}
   - component: {fileID: 1641027455}
   - component: {fileID: 1641027456}
-  - component: {fileID: 1641027457}
   m_Layer: 0
   m_Name: Video Manager
   m_TagString: Untagged
@@ -557,7 +556,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641027451}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: e60577d9a0ea5604c8d0278faaa7115e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 25d497d552e850c4baa9c9a2b8ab98c0, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -570,13 +569,15 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 1
@@ -705,26 +706,6 @@ MonoBehaviour:
   messageListener: {fileID: 0}
   reconnectionDelay: 1000
   maxUnreadMessages: 1000
---- !u!320 &1641027457
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641027451}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: b6d1ad2e8ca6ae54cb8208ad7e21f9ba, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 1
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 655695907250472701, guid: b6d1ad2e8ca6ae54cb8208ad7e21f9ba, type: 2}
-    value: {fileID: 1004654650}
-  m_ExposedReferences:
-    m_References:
-    - 778f27e85ae1add49b6c2e3e4b69d31a: {fileID: 1641027452}
 --- !u!1 &1823229642
 GameObject:
   m_ObjectHideFlags: 0
