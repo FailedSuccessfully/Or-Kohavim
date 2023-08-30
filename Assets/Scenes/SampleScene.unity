@@ -721,33 +721,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bcf00570cf80f4f8830a183d1386cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minBrightness: 0.3
+  minBrightness: 0
   maxBrightness: 1
   attenuation: 0.05
   idleTime: 1
   output: {fileID: 1130020791}
   title: {fileID: 1004654648}
-  titles:
-  - {fileID: 21300000, guid: 199085851ed280a448ba4ef37cc9a6ba, type: 3}
-  - {fileID: 21300000, guid: 7f480a461061f02498fcfa25bc168a2f, type: 3}
-  - {fileID: 21300000, guid: e487a846538025d42b874b74a47265d7, type: 3}
-  - {fileID: 21300000, guid: e64ca80270bd3f343a9be8fdb22a580a, type: 3}
-  - {fileID: 21300000, guid: df786e08d9d02794d9e2d170e12913f4, type: 3}
-  - {fileID: 21300000, guid: d90de2c98ba52604abfbd3d76380b6be, type: 3}
-  - {fileID: 21300000, guid: e487a846538025d42b874b74a47265d7, type: 3}
-  - {fileID: 21300000, guid: 199085851ed280a448ba4ef37cc9a6ba, type: 3}
-  - {fileID: 21300000, guid: e64ca80270bd3f343a9be8fdb22a580a, type: 3}
-  - {fileID: 21300000, guid: f97ecc891eba5dc4fae40fa94508e958, type: 3}
-  - {fileID: 21300000, guid: 199085851ed280a448ba4ef37cc9a6ba, type: 3}
-  - {fileID: 21300000, guid: e3f1c7e1698a2214fa32378fbe08e8fc, type: 3}
-  - {fileID: 21300000, guid: f97ecc891eba5dc4fae40fa94508e958, type: 3}
-  - {fileID: 21300000, guid: a21f529506a86fd49a909889479cfb7f, type: 3}
-  - {fileID: 21300000, guid: f97ecc891eba5dc4fae40fa94508e958, type: 3}
-  - {fileID: 0}
-  - {fileID: 21300000, guid: f97ecc891eba5dc4fae40fa94508e958, type: 3}
-  - {fileID: 21300000, guid: 7f480a461061f02498fcfa25bc168a2f, type: 3}
-  - {fileID: 21300000, guid: 6ee5dcf5a79cf404381367f4bdfdd577, type: 3}
-  - {fileID: 21300000, guid: 391a30b76275d4f49bf5da6e02cf8242, type: 3}
+  titles: []
   timeStamps:
   - {x: 3, y: 9.28}
   - {x: 11, y: 12.06}
