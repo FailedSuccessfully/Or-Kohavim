@@ -21,7 +21,7 @@ public class VideoManager : MonoBehaviour
     int persistantIndex;
 
     
-    float currentBrightness;
+    [Range(0,1)]public float currentBrightness;
     PlayableDirector pd;
     VideoPlayer vid;
     PlayerInput input;
@@ -91,7 +91,10 @@ public class VideoManager : MonoBehaviour
     }
 
     void SetOutput() {
-        output.color = Color.white * currentBrightness;
+        //output.color = Color.white * currentBrightness;
+        Color newCol = output.color;
+        newCol.a = currentBrightness;
+        output.color = newCol;
     }
     void SetOutputFromAnalog(){
         string message = serial.ReadSerialMessage();
